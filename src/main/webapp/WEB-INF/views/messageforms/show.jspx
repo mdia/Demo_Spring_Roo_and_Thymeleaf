@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_arkadias_html5_domain_MessageForm" object="${messageform}" path="/messageforms" z="mpaAB7ZafSb9ugikJs9VDNgPeNs=">
+        <field:display field="name" id="s_com_arkadias_html5_domain_MessageForm_name" object="${messageform}" z="MdSvludhyKWjqCUYkHpQzNaXRC8="/>
+        <field:display field="email" id="s_com_arkadias_html5_domain_MessageForm_email" object="${messageform}" z="Y8PjHcgJr3zza0upOqDnZePIlIY="/>
+        <field:display field="phone" id="s_com_arkadias_html5_domain_MessageForm_phone" object="${messageform}" z="X9BDoLJV1Z8JpmzW8sZSlyDiPIQ="/>
+        <field:display field="website" id="s_com_arkadias_html5_domain_MessageForm_website" object="${messageform}" z="DSwFQLJX7z7IFn5mijBGKVfsGfo="/>
+        <field:display field="message" id="s_com_arkadias_html5_domain_MessageForm_message" object="${messageform}" z="kIBAEtF1NeJlfeGDIlTMkiWAD6Q="/>
+    </page:show>
+</div>

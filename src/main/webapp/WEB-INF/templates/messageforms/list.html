@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title></title>
+<meta name="description" content="HTML 5 CSS 3 Spring Form" />
+<meta name="author" content="alex soto" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="stylesheet" href="../../../css/style.css" th:href="@{/css/style.css}"/>
+
+<script src="../../../js/libs/modernizr-2.0.6.min.js" th:src="@{/js/libs/modernizr-2.0.6.min.js}"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>HTML5 Spring Roo Thymeleaf Demo</h1>
+            <hr />
+        </header>
+
+        <h1>Contact Submissions List</h1>
+                
+        <table id="display-data">
+            <thead>
+                <tr>
+                    <th th:text="#{message_list.theader.count}">ID</th>
+                    <th th:text="#{message_list.theader.name}">Name</th>
+                    <th th:text="#{message_list.theader.email}">E-Mail</th>
+                    <th th:text="#{message_list.theader.phone}">Phone</th>
+                    <th th:text="#{message_list.theader.website}">Website</th>
+                    <th th:text="#{message_list.theader.message}">Message</th>
+                    <th th:text="#{message_list.theader.action}" colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody th:if="${#objects.nullSafe(messageforms, false)}">
+                <tr th:each="row, rowStat : ${messageforms}">
+                    <td th:text="${rowStat.Count}">1</td>
+                    <td th:text="${row.name}">My Name</td>
+                    <td th:text="${row.email}">my@email.com</td>
+                    <td th:text="${row.phone}">999 555 1212</td>
+                    <td th:text="${row.website}">http://mysite.com</td>
+                    <td th:text="${row.message}">My Message...</td>
+                    <td>
+                        <a class="btnIcon" href="update.html" th:href="@{'/messageforms/' + ${row.id} + '?form'}">
+                            <img id="editBtn" name="editBtn" src="../../../img/update.png" title="edit" alt="edit" class="btnIcon" 
+                                th:src="@{/img/update.png}" th:title="#{message_list.button.edit}" th:alt="#{message_list.button.edit}"/></a>
+                    </td>
+                    <td>
+                        <form action="list.html" th:action="@{'/messageforms/' + ${row.id}}" method="post">
+                            <input type="hidden" name="_method" value="DELETE" />
+                            <input type="hidden" name="page" value="1" />
+                            <input type="hidden" name="size" value="10" />
+                            <input type="image" id="deleteBtn" name="deleteBtn" src="../../../img/delete.png" title="Delete" alt="Delete" class="btnIcon" 
+                                th:src="@{/img/delete.png}" th:title="#{message_list.button.delete}" th:alt="#{message_list.button.delete}"/>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a class="button btnSmall" href="../index.html" th:href="@{/}" th:text="#{message_list.button.home}">Home</a>
+        <a class="button btnSmall" href="create.html" th:href="@{'/messageforms?form'}" th:text="#{message_list.button.new}">New</a>
+        <a class="button btnSmall" href="list.html" th:href="@{'/messageforms?page=1&amp;size=10'}" th:text="#{message_list.button.list}">List</a>
+        
+		<footer>
+            <hr />
+            <h2>Footer</h2>
+		</footer>
+	</div>
+	<!--! end of #container -->
+    
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+		/*<![CDATA[*/
+		      window.jQuery
+				|| document
+						.write('<script src="../../../js/libs/jquery-1.6.2.min.js th:src="@{/js/libs/jquery-1.6.2.min.js}"><\/script>')   
+		/*]]>*/
+	</script>
+
+</body>
+</html>

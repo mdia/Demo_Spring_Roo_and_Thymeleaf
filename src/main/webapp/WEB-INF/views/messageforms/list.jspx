@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_arkadias_html5_domain_MessageForm" items="${messageforms}" z="131L2jE5UW2JTtkET6stbuHaIXE=">
+        <table:table data="${messageforms}" id="l_com_arkadias_html5_domain_MessageForm" path="/messageforms" z="w+y4Iu97FuS4iJM1BvcjxgLPD+Y=">
+            <table:column id="c_com_arkadias_html5_domain_MessageForm_name" property="name" z="QLLAa8efuCD8SM+Ogi1Lhz6Ukn8="/>
+            <table:column id="c_com_arkadias_html5_domain_MessageForm_email" property="email" z="Wc6YHDgiwhQx+vAMTi+iqyYftMs="/>
+            <table:column id="c_com_arkadias_html5_domain_MessageForm_phone" property="phone" z="DvJf0333lGNy8kH0HoG3KNngc1Y="/>
+            <table:column id="c_com_arkadias_html5_domain_MessageForm_website" property="website" z="eLZa6lHwit2zB9RGzK+kQlGYYjU="/>
+            <table:column id="c_com_arkadias_html5_domain_MessageForm_message" property="message" z="FvjGJHcititcXAZ1J4N8UQANrvw="/>
+        </table:table>
+    </page:list>
+</div>

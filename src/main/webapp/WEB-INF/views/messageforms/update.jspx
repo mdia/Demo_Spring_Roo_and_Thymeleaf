@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_arkadias_html5_domain_MessageForm" modelAttribute="messageForm" path="/messageforms" versionField="Version" z="miqTSJ8KcTX5osQn9nVAg0ew7wU=">
+        <field:input field="name" id="c_com_arkadias_html5_domain_MessageForm_name" min="2" required="true" z="GImYHJ9JCXaofegvLAP++z5h3XM="/>
+        <field:textarea field="email" id="c_com_arkadias_html5_domain_MessageForm_email" validationMessageCode="field_invalid_email" z="UqJ76Kd/tqlcBzAY3HZyhvmhxPM="/>
+        <field:input field="phone" id="c_com_arkadias_html5_domain_MessageForm_phone" max="17" min="10" required="true" z="gPqO3C3Gk9VPR5Jjw12NZN7tpw8="/>
+        <field:input field="website" id="c_com_arkadias_html5_domain_MessageForm_website" z="ENtuCYDW9JY9FqOdQjRMGGDZiAU="/>
+        <field:input field="message" id="c_com_arkadias_html5_domain_MessageForm_message" min="1" required="true" z="/81OY2OGQqDEGFgLNJ5hMEDJaNQ="/>
+    </form:update>
+</div>

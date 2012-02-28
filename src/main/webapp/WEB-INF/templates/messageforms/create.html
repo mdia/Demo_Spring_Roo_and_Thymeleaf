@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title></title>
+<meta name="description" content="HTML 5 CSS 3 Spring Form" />
+<meta name="author" content="alex soto"/>
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="stylesheet" href="../../../css/style.css" th:href="@{/css/style.css}"/>
+
+<script src="../../../js/libs/modernizr-2.0.6.min.js" th:src="@{/js/libs/modernizr-2.0.6.min.js}"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>HTML5 Spring Roo Thymeleaf Demo</h1>
+            <hr />
+        </header>
+
+        <form class="clearfix" action="list.html" th:object="${messageForm}" th:action="@{/messageforms}" method="post">
+        
+            <h1>Contact Us ...</h1>
+
+            <div id="errors" th:if="${#fields.hasErrors('*')}">
+                <ul>
+                    <li th:text="#{message_form.validation.errors}">Errors must be corrected before the form can be submitted</li>
+                </ul>
+            </div>
+
+            <fieldset id="user-details">
+            
+                <label for="name" th:text="#{message_form.label.name}" 
+                    th:class="${#fields.hasErrors('name')}? 'labelError'">Name: </label>
+                    <span class="labelTextError" th:if="${#fields.hasErrors('name')}" th:text="#{message_form.validation.name}"></span>
+                <input type="text" name="name" value="" id="name" placeholder="Your Full Name"  autofocus="autofocus" 
+                    th:field="*{name}" th:placeholder="#{message_form.placeholder.name}" th:class="${#fields.hasErrors('name')}? 'fieldError'" />
+                
+                <label for="email" th:text="#{message_form.label.email}"
+                    th:class="${#fields.hasErrors('email')}? 'labelError'">Email: </label>
+                    <span class="labelTextError" th:if="${#fields.hasErrors('email')}" th:text="#{message_form.validation.email}"></span>
+                <input type="email" name="email" value="" id="email" placeholder="mail@email.com" 
+                    th:field="*{email}" th:placeholder="#{message_form.placeholder.email}" th:class="${#fields.hasErrors('email')}? 'fieldError'" /> 
+
+                <label for="phone" th:text="#{message_form.label.phone}"
+                    th:class="${#fields.hasErrors('phone')}? 'labelError'">Phone:</label>
+                    <span class="labelTextError" th:if="${#fields.hasErrors('phone')}" th:text="#{message_form.validation.phone}"></span>
+                <input type="text" name="phone" value="" id="phone" placeholder="000 000-0000" 
+                    th:field="*{phone}" th:placeholder="#{message_form.placeholder.phone}" th:class="${#fields.hasErrors('phone')}? 'fieldError'" />
+
+                <label for="website" th:text="#{message_form.label.website}"
+                    th:class="${#fields.hasErrors('website')}? 'labelError'">Website:</label>
+                    <span class="labelTextError" th:if="${#fields.hasErrors('website')}" th:text="#{message_form.validation.website}"></span>
+                <input type="url" name="website" value="" id="website" placeholder="http://domain.tld"
+                    th:field="*{website}" th:placeholder="#{message_form.placeholder.website}" th:class="${#fields.hasErrors('website')}? 'fieldError'" />
+
+            </fieldset>
+            <!--end user-details-->
+            
+            <fieldset id="user-message">
+            
+                <label for="message" th:text="#{message_form.label.message}"
+                    th:class="${#fields.hasErrors('message')}? 'labelError'">Your Message: </label>
+                    <span class="labelTextError" th:if="${#fields.hasErrors('message')}" th:text="#{message_form.validation.message}"></span>
+                <textarea name="message" rows="0" cols="0" id="message" placeholder="Tell us what's on your mind!" 
+                    th:text="*{message}" th:placeholder="#{message_form.placeholder.message}" th:class="${#fields.hasErrors('message')}? 'fieldError'"></textarea>
+
+                <input type="submit" value="Submit Message" name="submitMsg" class="submitBtn" th:value="#{message_form.button.submit}"/>
+                <a class="button" href="../index.html" th:href="@{/}" th:text="#{message_form.button.home}">Home</a>
+
+            </fieldset>
+            <!-- end user-message -->
+            
+        </form>
+
+        <footer>
+            <hr />
+            <h2>Footer</h2>
+        </footer>
+    </div>
+    <!--! end of #container -->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+        /*<![CDATA[*/
+              window.jQuery || 
+                  document.write('<script src="../../../js/libs/jquery-1.6.2.min.js th:src="@{/js/libs/jquery-1.6.2.min.js}"><\/script>')   
+        /*]]>*/
+    </script>
+
+</body>
+</html>
