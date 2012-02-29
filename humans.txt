@@ -1,0 +1,18 @@
+/* the humans responsible */
+
+/* TEAM */
+  Glen Ihrig - Co-Owner/Developer - Arkadia Systems 
+  Site: http://arkadia-systems.com/ - Some day we'll get something meaningful up there...
+  Twitter: @ArkadiaSystems
+  Location: Southern California, USA
+
+/* THANKS */
+Thymeleaf - http://www.thymeleaf.org/ - An elegant and well-formed way of creating HTML5 templates.
+HTML5 Boilerplate - http://html5boilerplate.com/ - A rock-solid default for HTML5 awesome.
+Alex Soto - http://www.lordofthejars.com/2011/11/your-big-daddys-got-no-place-to-stay.html - Thanks for the inspiration.
+humans.txt - http://humanstxt.org/ - The Internet is for Humans...
+
+/* SITE/Project */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Thymeleaf, Spring Framework, Spring MVC, Java
